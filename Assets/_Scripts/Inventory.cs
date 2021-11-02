@@ -8,12 +8,12 @@ namespace LC.Inventory.Main
 {
     public class Inventory : MonoBehaviour
     {
-        //singleton model
-        public static Inventory Instance;
+        [Header("Control inputs")]
+        [SerializeField] private string INVENTORY_BUTTON = "Inventory";
 
-        private string INVENTORY_BUTTON = "Inventory";
 
-        private bool display_inventory = true;
+        //general variables
+        private bool display_inventory = false;
 
         [Inject(Id = "ui_slots_parent")]
         private GameObject slots_parent;
@@ -22,6 +22,7 @@ namespace LC.Inventory.Main
 
         internal List<Slot> inventory = new List<Slot>();
 
+        //description variables
         private Slot highlighted_slot = new Slot();
 
         private PhysicalDescriptionItem description_item_obj;
@@ -29,7 +30,6 @@ namespace LC.Inventory.Main
         private Text desc_title;
         private Text desc_content;
 
-        private void Awake() => Instance = this;
         private void Start() => InitializeComponents(); 
 
         private void InitializeComponents()
@@ -104,7 +104,11 @@ namespace LC.Inventory.Main
             }
         }
 
-
+        /// <summary>
+        /// Void that hides the empty description or activates it if conditions are fulfilled
+        /// </summary>
+        /// <param name="id">Id of slot</param>
+        /// <param name="val">Value of activation</param>
         public void UpdateDesription(int id,bool val)
         {
             if (val && !description_parent.activeInHierarchy)

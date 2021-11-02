@@ -8,6 +8,8 @@ namespace LC.Inventory.Main
     public class PhysicalDescriptionItem
     {
         public GameObject root_obj;
+        public Text description_item_name;
+        public Text description_item_desc;
         public void InitializeComponent()
         {
             this.description_item_name = root_obj.transform.GetChild(0).GetComponent<Text>();
@@ -19,7 +21,6 @@ namespace LC.Inventory.Main
             this.root_obj = root;
             InitializeComponent();
         }
-        public Text description_item_name;
-        public Text description_item_desc;
+       
     }
 }

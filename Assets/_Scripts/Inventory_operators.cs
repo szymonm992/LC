@@ -10,6 +10,10 @@ namespace LC.Inventory.Main
         [Inject]
         Inventory inv_script;
 
+        /// <summary>
+        /// Finds the first empty slot or returns -1 as an index
+        /// </summary>
+        /// <returns></returns>
         public int FindEmptySlot()
         {
             for (int i = 0; i < inv_script.inventory.Count; i++)
@@ -22,11 +26,11 @@ namespace LC.Inventory.Main
         public bool AddItem(int id, int quantity)
         {
             int first_empty = FindEmptySlot();
-            Slot slot_with_empty = inv_script.inventory[first_empty];
             if (first_empty != -1)
             {
+                Slot slot_with_empty = inv_script.inventory[first_empty];
                 //Item added_item = inv_db.GetItem(id);
-               // slot_with_empty.Item = added_item;
+                // slot_with_empty.Item = added_item;
                 //slot_with_empty.Quantity = quantity;
                 return true;
             }

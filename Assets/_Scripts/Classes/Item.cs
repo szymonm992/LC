@@ -31,7 +31,7 @@ namespace LC.Inventory.Main
 
         public virtual void Use()
         {
-            Debug.Log("used item");
+            Debug.Log("U¿yto przedmiotu");
         }
 
 
