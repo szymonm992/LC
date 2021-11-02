@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Zenject;
 
@@ -10,6 +11,8 @@ namespace LC.Inventory.Main
     {
         [Inject]
         Inventory inv_script;
+        [Inject]
+        Inventory_operators inv_operators;
 
         public int ID = -1;
 
@@ -23,6 +26,13 @@ namespace LC.Inventory.Main
             img_comp = GetComponent<Image>();
         }
 
+        public void TryInteract(BaseEventData data)
+        {
+            PointerEventData pointerEventData = data as PointerEventData;
+
+            if (pointerEventData.button == PointerEventData.InputButton.Left)
+                inv_operators.SetInteracting(ID);
+        }
         public void Hover()
         {
             img_comp.color = colHov;

@@ -10,6 +10,8 @@ namespace LC.Inventory.Main
         [Inject]
         Inventory inv_script;
 
+
+        int interacting_item_index = -1;
         /// <summary>
         /// Finds the first empty slot or returns -1 as an index
         /// </summary>
@@ -38,6 +40,24 @@ namespace LC.Inventory.Main
             {
                 Debug.LogError("Cant find any empty slot");
                 return false;
+            }
+        }
+
+
+        public void SetInteracting(int id)
+        {
+            interacting_item_index = id;
+            Debug.Log("interacting with " + id);
+        }
+        public void RemoveItemAtSlot(int id)
+        {
+            Slot slot_in_inv = inv_script.inventory[id];
+            if(!slot_in_inv.isEmpty())
+            {
+                if (slot_in_inv.Quantity > 1)
+                    slot_in_inv.Quantity -= 1;
+                else
+                    slot_in_inv.DeleteItemFromSlot();
             }
         }
     }
