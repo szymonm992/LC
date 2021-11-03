@@ -9,14 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6deaafecfe36c14b84b1909d02f2cfc, type: 3}
-  m_Name: BasicArmor
+  m_Script: {fileID: 11500000, guid: b979f13272487b9488a595c43f63ee1d, type: 3}
+  m_Name: BiggerHealingPotion
   m_EditorClassIdentifier: 
-  id: 1
-  display_name: Podstawowa zbroja
-  description: "To jest podstawowa zbroja,\nkt\xF3ra daje niewielki pancerz oraz
-    \nposiada niewiele HP"
+  id: 2
+  display_name: "Wi\u0119kszy eliksir"
+  description: "To jeszcze wspanialsza  mikstura lecznicza, \nkt\xF3ra leczy wi\u0119cej
+    Twojego HP"
   icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  armor_value: 34
-  armor_hp: 50
-  equipping_spot: 2
+  healing_hp: 500

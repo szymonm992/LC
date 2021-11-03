@@ -10,7 +10,6 @@ namespace LC.Inventory.Main
          public int id = -1;
 
          public string display_name = "";
-         public string db_name = "";
          [Multiline]
          public string description = "";
 

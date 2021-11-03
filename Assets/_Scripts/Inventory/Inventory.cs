@@ -90,7 +90,7 @@ namespace LC.Inventory.Main
             {
                 Slot highlighted_slot = inventory[id];
                 if (!highlighted_slot.isEmpty())
-                    AssignDescValues(val, highlighted_slot.Item.name, highlighted_slot.Item.description);
+                    AssignDescValues(val, highlighted_slot.Item.display_name, highlighted_slot.Item.description);
                     
             }
             else if (!val && description_parent.activeInHierarchy)

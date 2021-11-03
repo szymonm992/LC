@@ -263,9 +263,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7986078579098700620, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: ID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7986078579098700620, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: Quantity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -309,8 +317,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4870628382437944421, guid: 608d626b1a408c5418787214ca09455d, type: 3}
       propertyPath: m_Name
-      value: healing_potion (2)
+      value: bigger_healing_potion
       objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944423, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 608d626b1a408c5418787214ca09455d, type: 3}
 --- !u!1 &580615073 stripped
@@ -887,7 +899,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2940740379440050554, guid: fe031faafe332624d9b92f5098b7f021, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2940740379440050554, guid: fe031faafe332624d9b92f5098b7f021, type: 3}
       propertyPath: m_LocalPosition.x
@@ -931,10 +943,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6010743561546996247, guid: fe031faafe332624d9b92f5098b7f021, type: 3}
       propertyPath: m_Name
-      value: basic_armor (1)
+      value: basic_helmet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8463574309595435596, guid: fe031faafe332624d9b92f5098b7f021, type: 3}
+      propertyPath: ID
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe031faafe332624d9b92f5098b7f021, type: 3}
+--- !u!1001 &1318384698
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -7986078579098700620, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: ID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7986078579098700620, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944417, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944421, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_Name
+      value: long_sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870628382437944423, guid: 608d626b1a408c5418787214ca09455d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0e138ce6cd06f74d83cf3884415be92, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 608d626b1a408c5418787214ca09455d, type: 3}
 --- !u!1 &1440554244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,6 +1308,9 @@ MonoBehaviour:
   all_items:
   - {fileID: 11400000, guid: 4fdbf21f6515a114b925e96f799de214, type: 2}
   - {fileID: 11400000, guid: 1d7587aecd3c6ce45bf6ad6777a87ac3, type: 2}
+  - {fileID: 11400000, guid: a5c79d8246769fb49ac478d01b4fb79f, type: 2}
+  - {fileID: 11400000, guid: 8dfbf47df163e954391e71eb1e26e206, type: 2}
+  - {fileID: 11400000, guid: ff680588d4ea658438c625b210fc3c3b, type: 2}
 --- !u!1 &1663272280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,7 +1552,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2940740379440050554, guid: fe031faafe332624d9b92f5098b7f021, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2940740379440050554, guid: fe031faafe332624d9b92f5098b7f021, type: 3}
       propertyPath: m_LocalPosition.x

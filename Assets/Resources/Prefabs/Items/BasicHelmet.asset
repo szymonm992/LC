@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6deaafecfe36c14b84b1909d02f2cfc, type: 3}
-  m_Name: BasicArmor
+  m_Name: BasicHelmet
   m_EditorClassIdentifier: 
-  id: 1
-  display_name: Podstawowa zbroja
-  description: "To jest podstawowa zbroja,\nkt\xF3ra daje niewielki pancerz oraz
-    \nposiada niewiele HP"
+  id: 4
+  display_name: "Podstawowy he\u0142m"
+  description: "Wspania\u0142y podstawowy kaskohe\u0142m kt\xF3ry co prawda nie\nchroni
+    Ci\u0119 przed ciosem mocniejszym ni\u017C spadaj\u0105cy \u015Bnieg \nale zawsze
+    co\u015B, nieprawda\u017C?"
   icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  armor_value: 34
-  armor_hp: 50
-  equipping_spot: 2
+  armor_value: 1
+  armor_hp: 5
+  equipping_spot: 0
