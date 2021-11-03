@@ -43,9 +43,6 @@ namespace LC.Inventory.Main
             }
 
             description_item_obj = new PhysicalDescriptionItem(description_parent.gameObject);
-            
-            desc_title = description_parent.transform.GetChild(0).GetComponent<Text>();
-            desc_content = description_parent.transform.GetChild(1).GetComponent<Text>();
         }
 
         private void Update()
@@ -55,9 +52,8 @@ namespace LC.Inventory.Main
                 display_inventory = !display_inventory;
                 slots_parent.SetActive(display_inventory);
             }
-
             if (display_inventory) DrawInventory();
-            DrawAdditional();
+        
         }
 
         private void DrawInventory()
@@ -82,28 +78,7 @@ namespace LC.Inventory.Main
             }
         }
 
-        private void DrawAdditional()
-        {
-            if (highlighted_slot.Quantity != 0)
-            {
-                if (!description_item_obj.root_obj.activeSelf)
-                {
-                    description_item_obj.root_obj.SetActive(true);
-                    description_item_obj.description_item_name.text = highlighted_slot.Item.name.ToString();
-                    description_item_obj.description_item_desc.text = highlighted_slot.Item.description.ToString();
-                }
-            }
-            else
-            {
-                if (description_item_obj.root_obj.activeSelf)
-                {
-                    description_item_obj.root_obj.SetActive(false);
-                    description_item_obj.description_item_name.text = "";
-                    description_item_obj.description_item_desc.text = "";
-                }
-            }
-        }
-
+      
         /// <summary>
         /// Void that hides the empty description or activates it if conditions are fulfilled
         /// </summary>
@@ -116,6 +91,7 @@ namespace LC.Inventory.Main
                 Slot highlighted_slot = inventory[id];
                 if (!highlighted_slot.isEmpty())
                     AssignDescValues(val, highlighted_slot.Item.name, highlighted_slot.Item.description);
+                    
             }
             else if (!val && description_parent.activeInHierarchy)
                 AssignDescValues(val, "", "");
@@ -124,8 +100,8 @@ namespace LC.Inventory.Main
         private void AssignDescValues(bool val,string title, string content)
         {
             description_parent.SetActive(val);
-            desc_title.text = title;
-            desc_content.text = content;
+            description_item_obj.description_item_name.text = title;
+            description_item_obj.description_item_desc.text = content;
         }
 
        
