@@ -15,7 +15,7 @@ namespace LC.Installers
         [Header("--ui--")]
         [SerializeField] private GameObject ui_slots_parent;
         [SerializeField] private GameObject ui_description;
-
+        [SerializeField] private GameObject ui_interaction;
 
         public override void InstallBindings()
         {
@@ -30,6 +30,7 @@ namespace LC.Installers
 
             Container.Bind<GameObject>().WithId("ui_slots_parent").FromInstance(ui_slots_parent).NonLazy();
             Container.Bind<GameObject>().WithId("ui_description").FromInstance(ui_description).NonLazy();
+            Container.Bind<GameObject>().WithId("ui_interaction").FromInstance(ui_interaction).NonLazy();
         }
 
     }

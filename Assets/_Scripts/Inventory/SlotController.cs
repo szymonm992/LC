@@ -33,6 +33,7 @@ namespace LC.Inventory.Main
             if (pointerEventData.button == PointerEventData.InputButton.Left)
                 inv_operators.SetInteracting(ID);
         }
+
         public void Hover()
         {
             img_comp.color = colHov;

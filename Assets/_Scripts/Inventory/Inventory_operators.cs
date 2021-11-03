@@ -13,8 +13,11 @@ namespace LC.Inventory.Main
         Inventory_DB inv_db;
 
         int interacting_item_index = -1;
-        
-        
+
+
+        [Inject(Id = "ui_interaction")]
+        GameObject ui_interaction;
+
         /// <summary>
         /// Finds the first empty slot or returns -1 as an index
         /// </summary>
@@ -51,7 +54,6 @@ namespace LC.Inventory.Main
                 int first_empty = FindEmptySlot();
                 if (first_empty != -1)
                 {
-                    Debug.Log("first empty at" + first_empty);
                     Slot slot_with_empty = inv_script.inventory[first_empty];
                     Item added_item = inv_db.GetItem(id);
                     slot_with_empty.Item = added_item;
@@ -79,25 +81,36 @@ namespace LC.Inventory.Main
         public void SetInteracting(int id)
         {
             interacting_item_index = id;
-            Debug.Log("interacting with " + id);
+            if (id == -1)
+                ui_interaction.SetActive(false);
+            else if (!inv_script.inventory[id].isEmpty())
+                ui_interaction.SetActive(true);
+
         }
-        public void RemoveItemAtSlot(int id)
+        public void RemoveItem()
         {
-            Slot slot_in_inv = inv_script.inventory[id];
+            Slot slot_in_inv = inv_script.inventory[interacting_item_index];
             if(!slot_in_inv.isEmpty())
             {
                 if (slot_in_inv.Quantity > 1)
                     slot_in_inv.Quantity -= 1;
                 else
                     slot_in_inv.DeleteItemFromSlot();
+
+                SetInteracting(-1);
             }
         }
 
-        public void UseItemAtSlot(int id)
+        public void UseItem()
         {
-            Slot slot_in_inv = inv_script.inventory[id];
+            Slot slot_in_inv = inv_script.inventory[interacting_item_index];
             if (!slot_in_inv.isEmpty())
+            {
                 slot_in_inv.Item.Use();
+                SetInteracting(-1);
+            }
+                
+
         }
     }
 

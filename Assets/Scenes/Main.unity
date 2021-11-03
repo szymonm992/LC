@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 162451582}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1646769545}
+        m_TargetAssemblyTypeName: LC.Inventory.Main.Inventory_operators, Assembly-CSharp
+        m_MethodName: UseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &162451582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -972,6 +984,7 @@ MonoBehaviour:
   uinv_db: {fileID: 1646769548}
   ui_slots_parent: {fileID: 580615073}
   ui_description: {fileID: 1782256335}
+  ui_interaction: {fileID: 1746605146}
 --- !u!114 &1440554247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,7 +1099,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1545915421}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1646769545}
+        m_TargetAssemblyTypeName: LC.Inventory.Main.Inventory_operators, Assembly-CSharp
+        m_MethodName: RemoveItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1545915421
 MonoBehaviour:
   m_ObjectHideFlags: 0
