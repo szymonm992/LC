@@ -10,7 +10,7 @@ namespace LC.Installers
         [Header("--inventory--")]
         [SerializeField] private LC.Inventory.Main.Inventory inv;
         [SerializeField] private Inventory_operators uinv_operator;
-        //public Inventory_DB uinv_db;
+        [SerializeField] private Inventory_DB uinv_db;
 
         [Header("--ui--")]
         [SerializeField] private GameObject ui_slots_parent;
@@ -26,7 +26,7 @@ namespace LC.Installers
         {
             Container.BindInterfacesAndSelfTo<LC.Inventory.Main.Inventory>().FromInstance(inv).AsSingle();
             Container.BindInterfacesAndSelfTo<Inventory_operators>().FromInstance(uinv_operator).AsSingle();
-            //Container.BindInterfacesAndSelfTo<UInventory_DB>().FromInstance(uinv_db).AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<Inventory_DB>().FromInstance(uinv_db).AsSingle().NonLazy();
 
             Container.Bind<GameObject>().WithId("ui_slots_parent").FromInstance(ui_slots_parent).NonLazy();
             Container.Bind<GameObject>().WithId("ui_description").FromInstance(ui_description).NonLazy();

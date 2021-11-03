@@ -76,7 +76,7 @@ namespace LC.Inventory.Main
                 else
                 {
                     if (!icon_img.activeSelf) icon_img.SetActive(true);
-                    icon_img_spr.sprite = slot.Item.GetSprite();
+                    icon_img_spr.sprite = slot.Item.icon;
                     quant_text.text = slot.Quantity.ToString();
                 }
             }
@@ -89,8 +89,8 @@ namespace LC.Inventory.Main
                 if (!description_item_obj.root_obj.activeSelf)
                 {
                     description_item_obj.root_obj.SetActive(true);
-                    description_item_obj.description_item_name.text = highlighted_slot.Item.Name.ToString();
-                    description_item_obj.description_item_desc.text = highlighted_slot.Item.Description.ToString();
+                    description_item_obj.description_item_name.text = highlighted_slot.Item.name.ToString();
+                    description_item_obj.description_item_desc.text = highlighted_slot.Item.description.ToString();
                 }
             }
             else
@@ -115,7 +115,7 @@ namespace LC.Inventory.Main
             {
                 Slot highlighted_slot = inventory[id];
                 if (!highlighted_slot.isEmpty())
-                    AssignDescValues(val, highlighted_slot.Item.Name, highlighted_slot.Item.Description);
+                    AssignDescValues(val, highlighted_slot.Item.name, highlighted_slot.Item.description);
             }
             else if (!val && description_parent.activeInHierarchy)
                 AssignDescValues(val, "", "");

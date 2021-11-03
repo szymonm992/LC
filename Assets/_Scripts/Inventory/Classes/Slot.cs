@@ -15,13 +15,13 @@ namespace LC.Inventory.Main
 
         public Slot()
         {
-            this.item = new Item();
+            this.item = null;
             this.quantity = 0;
             this.slot_item = null;
         }
         public Slot(GameObject slot)
         {
-            this.item = new Item();
+            this.item = null;
             this.quantity = 0;
             this.slot_item = slot;
         }
@@ -33,7 +33,7 @@ namespace LC.Inventory.Main
 
         public void DeleteItemFromSlot()
         {
-            this.item = new Item();
+            this.item = null;
             this.quantity = 0;
         }
         public Item Item
@@ -60,7 +60,7 @@ namespace LC.Inventory.Main
         }
         public bool isEmpty()
         {
-            if (this.item.ID == -1) return true;
+            if (this.item == null || this.item.id == -1) return true;
             else return false;
         }
     }
